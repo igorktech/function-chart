@@ -13,13 +13,15 @@
 #include <QtCharts/QSplineSeries>
 #include <QtCharts/QVXYModelMapper>
 #include <QtWidgets/QHeaderView>
+#include <QPainter>
+#include <QtCharts>
 #include <QPushButton>
 #include <datawindow.h>
 class Graphics : public QWidget
 {
     Q_OBJECT
-QtCharts::QLineSeries *series;
-QtCharts::QChart *chart;
+QLineSeries *series;
+QChart *chart;
 QGridLayout* gLay;
 DataWindow *dataWindow;
 QVector<QPointF>* VecData;

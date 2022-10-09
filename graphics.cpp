@@ -3,15 +3,15 @@ Graphics::Graphics(QWidget *parent) : QWidget(parent),
     m_isTouching(false)
 {
 
-    series = new QtCharts::QLineSeries();
+    series = new QLineSeries();
 
-    chart = new QtCharts::QChart();
+    chart = new QChart();
     chart->legend()->hide();
     chart->addSeries(series);
     chart->createDefaultAxes();
     chart->axes(Qt::Vertical).first()->setRange(0, 10);
 
-    QtCharts::QChartView *chartView = new QtCharts::QChartView(chart);
+    QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
     gLay = new QGridLayout;
     gLay->addWidget(chartView, 1, 1);

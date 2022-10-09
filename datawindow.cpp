@@ -76,7 +76,7 @@ void DataWindow::loadFromFile(){
 
             QString fileLine = in.readLine();
 
-            QStringList lineToken = fileLine.split(",", QString::SkipEmptyParts);
+            QStringList lineToken = fileLine.split(QRegularExpression(","), Qt::SkipEmptyParts);
 
             for (int j = 0; j < lineToken.size(); j++) {
                 QString value = lineToken.at(j);
